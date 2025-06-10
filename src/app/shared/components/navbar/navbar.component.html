@@ -1,0 +1,26 @@
+<mat-toolbar class="navbar" color="transparent">
+<img routerLink="/home" src="assets/logo.png" alt="Logo" class="logo" />
+
+  <nav class="nav-menu">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/category" class="dropdown">Category <mat-icon>expand_more</mat-icon></a>
+    <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact us</a>
+  </nav>
+
+  <div class="nav-icons">
+    <button mat-icon-button class="icon-button" [routerLink]="['/search']">
+      <mat-icon>search</mat-icon>
+    </button>
+
+    <button mat-icon-button class="icon-button">
+      <mat-icon (click)="cartService.toggleCart()">shopping_cart</mat-icon>
+      <span class="badge">{{cartService.items.length}}</span>
+    </button>
+    <app-cart *ngIf="cartService.isOpen"></app-cart>
+
+    <button mat-icon-button class="icon-button">
+      <mat-icon>person_outline</mat-icon>   
+    </button>
+  </div>
+</mat-toolbar>

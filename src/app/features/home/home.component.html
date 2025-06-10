@@ -1,0 +1,154 @@
+<section class="hero">
+ <div class="overlay">
+   <div class="hero-content">
+    <h1>Capture the Moment,<br>Gift the Memory</h1>
+    <p>Gifts as Unique as Your Journey</p>
+    <button mat-raised-button color="accent">Shop Now</button>
+  </div>
+
+  <div class="hero-images">
+    <img src="assets/polaroid1.jpg" class="polaroid first" alt="Memories For Life" />
+    <div class="img-text">
+      <img src="assets/polaroid2.jpg" class="polaroid second" alt="Gift Set" />
+      <p class="t"> Memories For Life</p>
+    </div>
+  </div>
+   </div>
+</section>
+
+
+<section class="services">
+  <div class="service">
+    <mat-icon>redeem</mat-icon>
+    Gift baskets
+  </div>
+
+  <div class="service">
+    <mat-icon>local_offer</mat-icon>
+    Discount program
+  </div>
+
+  <div class="service">
+    <mat-icon>verified_user</mat-icon>
+    Buyer Protection
+  </div>
+
+  <div class="service">
+    <mat-icon>store</mat-icon>
+    Offline Stores
+  </div>
+</section>
+
+<section class="trending">
+  <h1>Trending Now</h1>
+  <p>Popular Products</p>
+   <div class="product-grid">
+    <app-product-card
+      *ngFor="let item of displayedProducts"
+      [product]="item">
+    </app-product-card>
+  </div>
+  <button mat-raised-button class="btn-show" (click)="toggleShow()">{{showAll ? "Show less": "Show more"}}</button>
+</section>
+<section class="trending">
+  <h1>Featured products</h1>
+  <p>Discover our curated selection of featured products</p>
+   <div class="product-grid">
+    <app-product-card
+      *ngFor="let item of displayedProducts"
+      [product]="item">
+    </app-product-card>
+  </div>
+  <button mat-raised-button class="btn-show" (click)="toggleShow()">{{showAll ? "Show less": "Show more"}}</button>
+</section>
+<app-banner
+  background="assets/banner-2.jpg"
+  title="What we offer"
+  subtitle="Safe & Sustainable gift for you"
+  buttonText="More Products">
+</app-banner>
+<section class="handmade-slider">
+  <div class="slider-left">
+    <h2>50+ Beautiful<br />handmade gift</h2>
+    <p>
+      Our designer already made a lot of beautiful<br />
+      prototype of handmade gift that inspire you
+    </p>
+    <button mat-raised-button color="accent">Explore More</button>
+  </div>
+
+  <div class="slider-images">
+    <div class="main-image">
+      <img [src]="currentSlide.image" alt="Slide" />
+      <div class="slide-caption">
+        <span>0{{ currentIndex + 1 }}</span>
+        <div>
+          <h4>{{ currentSlide.title }}</h4>
+        </div>
+         <button mat-icon-button class="arrow-btn" (click)="next()">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="next-image" *ngIf="nextSlide">
+      <img [src]="nextSlide.image" alt="Next" />
+    </div>
+    <button class="next-btn" (click)="next()">></button>
+  </div>
+
+  <div class="dots">
+    <span
+      *ngFor="let s of slides; let i = index"
+      [class.active]="i === currentIndex"
+    ></span>
+  </div>
+</section>
+<section class="testimonial-section">
+  <h2 class="section-title">
+    What Others Are Saying About Us
+  </h2>
+  <p class="section-subtitle">
+    Join The Hundreds Of Happy Customers Who Love Our Souvenirs!
+  </p>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-title">
+        <img src="assets/user1.jpg" alt="Peter Pan">
+        <div class="text-title">
+          <h3>Peter Pan</h3>
+          <div class="role">Customer</div>
+        </div>
+      </div>
+      <p class="feedback">
+        I absolutely love this souvenir! The craftsmanship is impeccable, and it serves as a beautiful reminder of my trip. The details are so intricate, and I can tell a lot of care went into making it. It's now one of my favorite pieces in my home, and I will definitely be back for more!
+      </p>
+    </div>
+
+    <div class="testimonial-card">
+     <div class="testimonial-title">
+        <img src="assets/user2.jpg" alt="Peter Pan">
+        <div class="text-title">
+          <h3>Maria Anna</h3>
+          <div class="role">Customer</div>
+        </div>
+      </div>
+      <p class="feedback">
+        This was the perfect gift for my friend. They absolutely adored it! The quality is outstanding, and it really captures the essence of the local culture. It's something unique that you can't find anywhere else, and the presentation was lovely. I highly recommend it to anyone looking for something special!
+      </p>
+    </div>
+
+    <div class="testimonial-card">
+<div class="testimonial-title">
+        <img src="assets/user3.jpg" alt="Peter Pan">
+        <div class="text-title">
+          <h3>Viruss Ice Cream</h3>
+          <div class="role">Customer</div>
+        </div>
+      </div>
+      <p class="feedback">
+        I purchased this as a gift for my family, and they were all so impressed. The quality exceeded my expectations, and the unique design really stands out. It's the perfect combination of local tradition and modern style. I'm so happy I found this gem!
+      </p>
+    </div>
+  </div>
+</section>
+

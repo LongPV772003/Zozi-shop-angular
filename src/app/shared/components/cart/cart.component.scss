@@ -1,0 +1,115 @@
+.cart-overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  h2{
+    margin-bottom: 25px;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    cursor: pointer;
+    color: #9F9F9F;
+    &:hover{
+        opacity: 0.8;
+    }
+  }
+  .box-item{
+    max-height: 360px; 
+    overflow-y: auto;  
+    margin-bottom: 16px;
+    padding-right: 4px;
+  }
+  .cart-item {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin: 18px 0;
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .info {
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .price {
+      color: #DA1F27;
+      font-weight: bold;
+    }
+    .close-round{
+        border: 1px solid #2E4156;
+        border-radius: 50%;
+        color: #2E4156;
+        zoom:0.6;
+        cursor: pointer;
+        &:hover{
+            background-color: #2E4156;
+            color: #fff;
+        }
+    }
+  }
+
+    .cart-footer{
+        position: absolute;
+        width: 85%;
+        bottom: 10%;
+        .subtotal {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            margin-top: 15px;
+            .total{
+                color: #DA1F27;
+                font-weight: bold;
+            }
+    }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            .my-cart{
+                border: 1px solid #FAA74F;
+                color: #FAA74F;
+                border-radius: 12px;
+                padding: 10px 60px;
+                font-weight: normal;
+                font-size: 15px;
+                margin-right: 15px;
+                &:hover{
+                    background-color: #FAA74F;
+                    color: #fff;
+                }
+            }
+            .check-out{
+                background-color: #FAA74F;
+                padding: 10px 60px;
+                font-size: 15px;
+                color: #fff;
+                border-radius: 12px;
+                 &:hover{
+                   border: 1px solid #FAA74F;
+                    color: #FAA74F;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

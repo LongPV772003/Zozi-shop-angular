@@ -1,0 +1,13 @@
+<div class="pagination">
+    <button class="arrow" (click)="prev()">&#8249;</button>
+
+  <button
+    *ngFor="let page of pages"
+    [class.active]="page === currentPage"
+    (click)="goToPage(page)">
+    {{ page }}
+  </button>
+
+  <button class="arrow" (click)="next()">&#8250;</button>
+</div>
+

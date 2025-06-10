@@ -1,0 +1,113 @@
+$primary-color: #FAA74F;
+$text-color: #1A2D42;
+$input-bg: #F5F5F5;
+
+.search-section {
+  padding: 1.5rem;
+  padding: 20px 68px;
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    .search-input-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      background-color: $input-bg;
+      padding: 16px 32px;
+      border-radius: 50px;
+      color: $text-color;
+
+      .search-icon {
+        margin-right: 0.5rem;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        font-size: 1rem;
+        color: $text-color;
+      }
+    }
+
+    .category-select {
+      background: $input-bg;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-size: 1rem;
+      color: $text-color;
+      appearance: none;
+      min-width: 280px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border-radius: 8px;
+      padding: 12px 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      &:hover{
+        background-color: #efbe8a
+      }
+    }
+  }
+
+  .sort-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    margin: 25px 0;
+
+    .label {
+      color: $text-color;
+      font-weight: 500;
+    }
+
+    button {
+      border: 1px solid #ddd;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      &.active {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+      }
+    }
+
+    .price-select {
+      min-width: 130px;
+    }
+
+    .result-count {
+      margin-left: auto;
+      color: $text-color;
+      font-weight: 500;
+    }
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .price-select {
+    background: #ffffff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    appearance: none;
+    min-width: 150px;
+    }
+}

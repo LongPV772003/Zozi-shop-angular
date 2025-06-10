@@ -1,0 +1,43 @@
+<section class="search-section">
+  <div class="search-bar">
+    <div class="search-input-wrapper">
+      <mat-icon class="search-icon">search</mat-icon>
+      <input type="text" placeholder="Article name or keywords..." [(ngModel)]="searchQuery">
+    </div>
+
+    <select [(ngModel)]="selectedCategory" class="category-select">
+      <option value="">All categories</option>
+      <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+    </select>
+
+    <button class="search-btn">Search</button>
+  </div>
+
+  <div class="sort-bar">
+    <span class="label">Sort by</span>
+    <button mat-stroked-button [class.active]="selectedSort === 'all'" (click)="selectSort('all')">All</button>
+    <button mat-stroked-button [class.active]="selectedSort === 'popular'" (click)="selectSort('popular')">Popular</button>
+    <button mat-stroked-button [class.active]="selectedSort === 'latest'" (click)="selectSort('latest')">Latest</button>
+    <button mat-stroked-button [class.active]="selectedSort === 'best'" (click)="selectSort('best')">Best seller</button>
+
+    <select [(ngModel)]="priceSort" class="price-select">
+        <option value="">Price</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+    </select>
+
+    <span class="result-count">Showing {{ paginatedFilteredProducts.length }} products</span>
+  </div>
+
+  <div class="product-grid">
+    <app-product-card *ngFor="let product of paginatedFilteredProducts" [product]="product"></app-product-card>
+  </div>
+
+  <app-pagination
+    [totalItems]="products.length"
+    [itemsPerPage]="8"
+    [currentPage]="currentPage"
+    (pageChange)="handlePageChange($event)">
+</app-pagination>
+</section>
+

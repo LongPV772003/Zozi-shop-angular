@@ -1,0 +1,19 @@
+<div class="product-card">
+  <div class="card-image">
+    <img [src]="product.image" alt="{{ product.name }}" />
+    <span class="label">New</span>
+    <button class="wishlist">
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+  </div>
+
+  <div class="card-info">
+    <div class="card-text">
+      <h3>{{ product.name }}</h3>
+      <span class="price">${{ product.price }}</span>
+    </div>
+    <button class="cart-btn" (click)="addToCart()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+</div>

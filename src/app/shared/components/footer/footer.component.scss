@@ -1,0 +1,121 @@
+.footer {
+  padding: 2rem;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding: 10px 68px;
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .footer-brand {
+      max-width: 250px;
+
+      .logo {
+        height:80px;
+      }
+
+      .tagline {
+        font-size: 14px;
+        margin-top: 8px;
+        color: #666;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        button {
+          cursor: pointer;
+          background-color: #fff;
+          border: none;
+          &:hover{
+            color: #FAA74F;
+          }
+        }
+        
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #999;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        font-size: 14px;
+
+        li {
+          margin: 6px 0;
+          color: #444;
+          &:hover{
+            color: #FAA74F;
+            cursor: pointer;
+          }
+
+          &.highlight {
+            color: #FAA74F;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .newsletter {
+        input {
+          padding: 8px 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          margin-bottom: 0.5rem;
+        }
+
+        .subscribe-btn {
+          background: #FAA74F;
+          cursor: pointer;
+          color: #fff;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          margin-left: 8px;
+          &:hover{
+            background: #fb8c00;
+          }
+        }
+
+        .slogan {
+          font-size: 12px;
+          margin-top: 0.5rem;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+
+    .payments img {
+      height: 20px;
+      margin-left: 0.75rem;
+    }
+  }
+}

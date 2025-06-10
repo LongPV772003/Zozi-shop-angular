@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 68px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.logo {
+  height: 70px; 
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 16px;
+
+  a {
+    color: #1A2D42;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &.active {
+      color: #FFA15F; // màu cam pastel nhẹ
+    }
+
+    &:hover {
+      color: #FFA15F;
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .icon-button {
+    position: relative;
+    color: #1a1a1a;
+
+    .mat-icon {
+      font-size: 22px;
+    }
+
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background-color: red;
+      color: white;
+      font-size: 10px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  }
+}
